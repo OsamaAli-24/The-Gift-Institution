@@ -1,0 +1,66 @@
+ <!--Navbar code-->
+
+ <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  
+  <a>&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;</a> 
+        <a class="navbar-brand" [routerLink]="['/home']">
+          <img src="../assets/Logo.png" alt="AGI logo" style="width:75px; height: 70px; margin-bottom: -6px; margin-top: -8px;">
+        </a>
+          <button type="button" class="navbar-toggler collapsed" data-toggle="collapse"  data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation" aria-haspopup="true" (click)="toggleCollapsed()">
+             <span class="navbar-toggler-icon"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbar-collapse"  [ngClass]="{'collapse': collapsed, 'navbar-collapse': true}"> 
+            
+            <ul class="navbar-nav mr-auto" >
+            <li>
+                <div class="navbar-space tab-space">
+                   &nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;
+                    &nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;
+                 </div>
+            </li>
+              <li class="nav-item" >
+                <a class="nav-link" 
+                [routerLink]="['']">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"
+                [routerLink]="['/courses']">Courses</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"
+                [routerLink]="['/free-resources']">Free Resource</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"
+                [routerLink]="['/contact']">Contact</a>
+              </li>
+
+              <li>
+                <div class="navbar-space tab-space">
+                    &nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;
+                    &nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;
+                 </div>
+            </li>
+          </ul>
+            
+          </div>
+        </nav>
+        <script>
+          function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+          }
+          
+          function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+          }
+          </script>
+        <!--Navbar code ends-->
+        
+
+        <router-outlet></router-outlet>
+
+<app-footer></app-footer>
